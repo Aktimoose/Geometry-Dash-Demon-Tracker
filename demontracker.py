@@ -3,6 +3,7 @@
 import requests
 import gspread
 from datetime import datetime
+import sys
 
 # puts the gd server response in a dictionary
 def parse_gd_response(response_text):
@@ -28,14 +29,18 @@ def get_creator_name(response_text, creator_id):
 
     return parts[1] # userid:name:accountid so name is index 1
 
-input_id = input("enter id or level name (id preferred): ")
+if len(sys.argv) > 1:
+    level_id = sys.argv[1]
+    print(f"i got the level id !!it's {level_id}")
+else:
+    level_id = input("enter id or level name (id preferred): ")
 
 headers = {
     "User-Agent": ""
 }
 
 data = {
-    "str": input_id,
+    "str": level_id,
     "star": 1,
     "diff": -2,
     "type": 0,
