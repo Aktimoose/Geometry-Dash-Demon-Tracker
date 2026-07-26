@@ -8,7 +8,7 @@ python script to append demons input into a spreadsheet
 
 automatically appends any demon you input into it onto a sheet with the current date.
 
-the name of the sheet is hardcoded in Line 78 and you'll need to change that part if you wish to use it yourself.
+the name of the sheet is hardcoded in Line 83 and you'll need to change that part if you wish to use it yourself.
 
 requires requests and gspread
 
